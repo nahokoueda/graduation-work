@@ -1,0 +1,323 @@
+@charset "UTF-8";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/*  common
+--------------------------------*/
+html {
+  font-size: 62.5%; /* 16px * 62.5% = 10px */
+  width: 100%;
+}
+body {
+  background-color: #f9f9f9;
+  color: #0f0f0f;
+  font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro",
+    "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku GothicPro",
+    "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO";
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  overflow-x: hidden;
+}
+a {
+  cursor: pointer;
+}
+.pc {
+  display: block;
+}
+.sp {
+  display: none;
+}
+/*  humburgar
+--------------------------------*/
+.open-button {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 36;
+  animation-name: fadein;
+  animation-duration: 0.5s;
+  animation-delay: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.open-button span,
+.open-button span:before,
+.open-button span:after {
+  position: absolute;
+  height: 4px;
+  width: 38px;
+  border-radius: 3px;
+  background: #ffffff;
+  display: block;
+  content: ""; /* ハンバーガーボタンの線を下にも2本表示させる*/
+  /* z-index: 30; */
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-delay: 0;
+  transition-timing-function: ease-in-out;
+}
+.open-button span:before {
+  width: 30px;
+  bottom: -14px;
+}
+.open-button span:after {
+  bottom: -28px;
+}
+
+/* ボタンをバツにする */
+
+.open-button.active span {
+  top: 0;
+  background: #707070;
+  transform: translateY(18px) rotate(-45deg);
+}
+.open-button.active span:before {
+  opacity: 0;
+}
+.open-button.active span:after {
+  top: 0;
+  background: #707070;
+  transform: translateY(0px) rotate(-90deg);
+}
+
+header nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 35;
+  background-color: rgb(000, 000, 000, 0.8);
+  /* display: none; */
+  opacity: 0;
+  pointer-events: none;
+  transition-property: all;
+  transition-duration: 0.6;
+  transition-delay: 0;
+  transition-timing-function: ease-in-out;
+}
+
+/* JQ動作 */
+
+header nav.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+header nav.slideRight {
+  /* animation-name: slideright;
+  animation-duration: 1s;
+  animation-delay: 0;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: both; */
+  transition-property: all;
+  transition-duration: 1s;
+  transition-delay: 0;
+  transition-timing-function: ease-in-out;
+  left: 0;
+}
+
+header nav {
+  animation-name: slideright_reverse;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-delay: 0;
+  transition-timing-function: ease-in-out;
+  left: 100%;
+}
+/* @keyframes slideright {
+  0% {
+    left: 1440px;
+  }
+  100% {
+    left: 0;
+  }
+} */
+header nav.active.SlideToRight {
+  animation-name: slidetoright;
+  animation-duration: 1s;
+  animation-delay: 0;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+@keyframes slidetoright {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 1440px;
+  }
+}
+
+.nav-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 800px;
+  height: 900px;
+  background-color: #f9f9f9;
+  z-index: 12;
+}
+.nav-list-area {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+.nav-containar {
+  height: 200px;
+  display: flex;
+}
+.nav-containar__child {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-top: dotted 1px #707070;
+  align-items: center;
+  transition-property: all color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: ease-in-out;
+}
+.nav-containar__child:hover {
+  background-color: #f2db94;
+}
+.nav-containar__child:hover p {
+  color: #ffffff;
+}
+.nav-text {
+  margin-top: 60px;
+  align-items: center;
+  border-right: dotted 1px #707070;
+}
+.border-none {
+  border-right: none;
+}
+.nav-containar__child p {
+  color: #707070;
+  width: 180px;
+  margin: 0 auto;
+}
+.nav-containar__child p:nth-of-type(2) {
+  width: 30px;
+  border-bottom: solid 2px #a0a654;
+}
+.nav-containar__child p:nth-of-type(3) {
+  font-family: "prenton", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  padding-top: 10px;
+}
+.border-underline {
+  border-bottom: dotted 1px #707070;
+}
+.sns-area00 a {
+  text-decoration: none;
+  color: #a65e44;
+}
+.sns-area00 i {
+  font-size: 5rem;
+  padding: 30px;
+  /* margin: 30px auto; */
+}
+@media (max-width: 960px) {
+  .pc {
+    display: none;
+  }
+  .sp {
+    display: block;
+  }
+}
+
+/*  footer
+--------------------------------*/
+footer {
+  color: #ffffff;
+  width: 100vw;
+  height: 500px;
+  background: url(../img/footer.jpeg) no-repeat 0% 60%;
+  background-size: cover;
+  position: relative;
+}
+.filiter-bg {
+  width: 100vw;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.footer-logo figure {
+  display: inline-block;
+  margin: 0 auto;
+  width: 130px;
+  height: 71px;
+  margin: 40px;
+  cursor: pointer;
+  z-index: 20;
+}
+.footer-logo img {
+  width: 100%;
+  height: 100%;
+}
+footer ul li {
+  letter-spacing: 0.2rem;
+}
+footer ul li:nth-of-type(2) {
+  padding-top: 8px;
+  font-size: 2.4rem;
+}
+footer ul {
+  margin-bottom: 60px;
+}
+.sns-area a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.sns-area i {
+  font-size: 4rem;
+  padding: 20px;
+  margin-bottom: 70px;
+}
+small {
+  font-size: 1.4rem;
+  letter-spacing: 0.08rem;
+}
+.toTop {
+  max-width: 1440px;
+}
+.toTop img {
+  position: fixed;
+  right: -60px;
+  bottom: 40px;
+  width: 210px;
+  height: 150px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+@media (max-width: 960px) {
+  .toTop img {
+    position: fixed;
+    right: 0px;
+  }
+}

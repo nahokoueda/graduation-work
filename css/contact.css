@@ -1,0 +1,361 @@
+.open-button {
+  animation: none;
+}
+/*  header
+--------------------------------*/
+.header-container {
+  width: 100vw;
+  height: 11vw;
+  position: relative;
+  margin-bottom: 30px;
+}
+.header-container img {
+  width: 142px;
+  height: 74px;
+  z-index: 10;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.open-button span,
+.open-button span:before,
+.open-button span:after {
+  background: #000000;
+}
+
+/*  main contact
+--------------------------------*/
+.contact-relative {
+  height: 400px;
+  position: relative;
+}
+.contact-bgArea {
+  position: absolute;
+  background-color: #f2db94;
+  width: 105vw;
+  height: 302px;
+  clip-path: polygon(0 0, 75% 0, 85% 50%, 75% 100%, 0 100%);
+}
+.row {
+  max-width: 1240px;
+  width: 86.111%;
+  margin: 0 auto;
+}
+.contact-bgArea h1 {
+  text-align: center;
+  font-family: "Signika", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 8rem;
+  color: #000000;
+  letter-spacing: 0.05em;
+  line-height: 12rem;
+  padding-top: 70px;
+}
+.contact-bgArea p {
+  font-size: 2.4rem;
+}
+@media (max-width: 960px) {
+  .header-container {
+    margin-bottom: 50px;
+  }
+  .contact-bgArea {
+    position: absolute;
+    background-color: #f2db94;
+    width: 105vw;
+    height: 260px;
+    clip-path: polygon(0 0, 75% 0, 85% 50%, 75% 100%, 0 100%);
+  }
+  .contact-bgArea h1 {
+    font-size: 6rem;
+    padding-top: 30px;
+  }
+  .contact-bgArea p {
+    font-size: 1.6rem;
+  }
+}
+
+/*  attention
+--------------------------------*/
+.attention-area {
+  max-width: 1240px;
+  width: 86.111%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.attention-wrapper {
+  background-color: #ededed;
+  width: 60vw;
+  /* height: 260px; */
+  max-width: 933px;
+  margin: 0 auto;
+}
+.attention-text {
+  padding: 40px;
+}
+.attention-wrapper h3 {
+  padding-bottom: 20px;
+}
+.attention-wrapper h3 span {
+  color: #ff0000;
+}
+.attention-wrapper p span {
+  border-bottom: solid 1px #707070;
+}
+@media (max-width: 960px) {
+  .attention-wrapper {
+    width: 60vw;
+    height: 300px;
+    max-width: 810px;
+    margin: 0 auto;
+  }
+  .attention-text {
+    padding: 40px;
+  }
+  .attention-wrapper h3 {
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 520px) {
+  .attention-wrapper {
+    width: 60vw;
+    height: 400px;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  .attention-text {
+    padding: 20px;
+  }
+}
+/*  check-number
+--------------------------------*/
+.checkArea {
+  margin-bottom: 160px;
+}
+.check-numberArea {
+  width: 38vw;
+  height: 3vw;
+  max-width: 550px;
+  max-height: 35px;
+  margin: 0 auto;
+  margin-bottom: 75px;
+}
+.check-numberArea ul {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.check-numberArea ul div {
+  width: 4vw;
+  height: 1px;
+  border-bottom: solid 1px #707070;
+}
+.check-numberArea ul span {
+  font-size: 2.4rem;
+}
+.check-numberArea ul li {
+  white-space: nowrap;
+  padding-bottom: 8px;
+  margin-left: 20px;
+}
+.check-numberArea li:nth-of-type(1) {
+  border-bottom: solid 3px #a0a654;
+}
+@media (max-width: 520px) {
+  .check-numberArea ul span {
+    font-size: 1.6rem;
+  }
+}
+
+/*  form-area
+--------------------------------*/
+section {
+  /* max-width: 1240px;
+  margin: 0 auto; */
+  text-align: center;
+}
+.form-area {
+  text-align: left;
+}
+.radio-buttom {
+  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.form-area h2 {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+.form-area span {
+  color: #ff0000;
+}
+.radio-buttom .input-area {
+  display: inline-block;
+  background-color: #ffffff;
+  width: 37vw;
+  height: 72px;
+  min-width: 375px;
+  max-width: 532px;
+  max-height: 72px;
+  border: solid 1px #000000;
+  margin: 0 20px 20px 0;
+}
+.input-area {
+  padding-top: 16px;
+}
+.input-area input {
+  margin-left: 10px;
+  /* position: absolute; */
+  top: 10px;
+  /* display: block; */
+  /* padding-top: 50px; */
+}
+@media (max-width: 960px) {
+}
+
+.name-area {
+  margin-bottom: 30px;
+}
+.name-area label {
+  display: block;
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+.name-area label span {
+  color: #ff0000;
+}
+.name-area input {
+  border: solid 1px #000000;
+  width: 70vw;
+  height: 57px;
+  min-width: 375px;
+  max-width: 1008px;
+  max-height: 57px;
+}
+
+.furigana-area {
+  margin-bottom: 30px;
+}
+.furigana-area label {
+  display: block;
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+.furigana-area label span {
+  color: #ff0000;
+}
+.furigana-area input {
+  border: solid 1px #000000;
+  width: 70vw;
+  height: 57px;
+  min-width: 375px;
+  max-width: 1008px;
+  max-height: 57px;
+}
+
+.tel-area {
+  margin-bottom: 30px;
+}
+.tel-area label {
+  display: block;
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+.tel-area label span {
+  color: #ff0000;
+}
+.tel-area input {
+  border: solid 1px #000000;
+  width: 35vw;
+  height: 57px;
+  min-width: 375px;
+  max-width: 504px;
+  max-height: 57px;
+}
+
+.email-area {
+  margin-bottom: 30px;
+}
+.email-area label {
+  display: block;
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+.email-area label span {
+  color: #ff0000;
+}
+.email-area input {
+  border: solid 1px #000000;
+  width: 70vw;
+  height: 57px;
+  min-width: 375px;
+  max-width: 1008px;
+  max-height: 57px;
+}
+
+.emailKakunin-area {
+  margin-bottom: 30px;
+}
+.emailKakunin-area label {
+  display: block;
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+.emailKakunin-area label span {
+  color: #ff0000;
+}
+.emailKakunin-area input {
+  border: solid 1px #000000;
+  width: 70vw;
+  height: 57px;
+  min-width: 375px;
+  max-width: 1008px;
+  max-height: 57px;
+}
+
+.inquirydetail-area {
+  margin-bottom: 80px;
+}
+.inquirydetail-area label {
+  display: block;
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+.inquirydetail-area label span {
+  color: #ff0000;
+}
+.inquirydetail-area textarea {
+  border: solid 1px #000000;
+  width: 90vw;
+  height: 346px;
+  max-width: 1053px;
+  max-height: 346px;
+}
+
+.check-box-area {
+  margin-bottom: 30px;
+}
+.check-box-area a {
+  text-decoration: none;
+  color: #000000;
+}
+.check-box-area span {
+  border-bottom: solid 1px #000000;
+}
+
+.click-button {
+  margin-bottom: 100px;
+}
+.click-button input {
+  background-color: #a65e44;
+  color: #ffffff;
+  font-size: 2.4rem;
+  width: 366px;
+  height: 82px;
+  border-radius: 50px;
+  box-shadow: 3px 3px 3px gray;
+  border: none;
+}
