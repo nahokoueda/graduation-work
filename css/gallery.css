@@ -214,17 +214,20 @@ header {
     justify-content: flex-start;
     align-items: normal;
     display: flex;
-    justify-content: space-between;
     width: 400px;
     height: 320px;
   }
   .small-photo__area div {
-    /* display: block; */
+    display: block;
     justify-content: start;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
-
+  .responsive-size {
+    width: 260px;
+    margin: 0 auto;
+  }
   .small-photo__area figure {
     margin-bottom: 32px;
   }

@@ -275,26 +275,10 @@ video {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(400px);
+    transform: translateX(100px);
   }
 }
-.wordFlow2 {
-  animation-name: word-flow2;
-  animation-duration: 8s;
-  animation-delay: 0s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-@keyframes word-flow2 {
-  0% {
-    opacity: 0;
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100px);
-  }
-}
+
 .fadeUp {
   animation-name: fade-up;
   animation-duration: 1s;
@@ -358,6 +342,33 @@ video {
   color: #707070;
   margin-bottom: 130px;
   letter-spacing: 0.03em;
+}
+.stylist-area__intro h1.wordFlow2 {
+  position: relative;
+  width: 26vw;
+  height: auto;
+  font-family: braisetto, script;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15rem;
+  color: #707070;
+  margin-bottom: 130px;
+  letter-spacing: 0.03em;
+  animation-name: word-flow2;
+  animation-duration: 8s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes word-flow2 {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
 }
 /* .concept-area__intro h1 span {
   font-family: annabelle-jf, sans-serif;
@@ -574,7 +585,7 @@ video {
 }
 .cutting-photo__Area img {
   /* margin-top: -300px; */
-  top: 100px;
+  top: 70px;
   right: 0;
   position: absolute;
   width: 69.444%;
@@ -617,7 +628,7 @@ video {
   /* display: block; */
   width: 40px;
   height: 110px;
-  bottom: 120px;
+  bottom: 90px;
   animation-name: scrollAnimation;
   animation-duration: 2.5s;
   animation-delay: 0s;
@@ -650,7 +661,7 @@ video {
 .sliderBGBrown {
   animation-name: slider-brown;
   animation-duration: 2s;
-  animation-delay: 1s;
+  animation-delay: 1.5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
   animation-fill-mode: both;
@@ -898,7 +909,7 @@ a {
 
 @media (max-width: 960px) {
   .calendarArea {
-    margin-bottom: 250px;
+    margin-bottom: 100px;
   }
 
   .calendar-container__wrap {
@@ -932,7 +943,7 @@ a {
   .slick-next {
     position: absolute;
     z-index: 3;
-    top: 40%;
+    top: 30%;
     cursor: pointer; /*マウスカーソルを指マークに*/
     outline: none; /*クリックをしたら出てくる枠線を消す*/
     border-top: 3px solid #fff; /*矢印の色*/
@@ -958,14 +969,21 @@ a {
   }
   .slick-list.draggable,
   .slick-slider {
-    height: 100vw;
+    height: 800px;
     min-height: 800px;
+  }
+  .clendar-up {
+    height: 400px;
   }
   .slick-track {
     overflow: hidden;
   }
   .slick-cloned {
     display: none;
+  }
+  .dayoff {
+    position: absolute;
+    bottom: 200px;
   }
 }
 
@@ -975,6 +993,24 @@ a {
   max-width: 1240px;
   margin: 0 auto;
   margin-bottom: 200px;
+}
+.reserve-wrapper.fadeUp {
+  animation-name: fade-up;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .reserve-title {
   position: relative;
