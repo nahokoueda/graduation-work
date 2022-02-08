@@ -9,8 +9,6 @@
   background: url(../img/3menuTop03@2x.jpg) no-repeat 70% 90%;
   background-attachment: fixed;
   background-size: cover;
-  /* zoom: 1.2; */
-  overflow: hidden;
   width: 100vw;
   height: 600px;
   margin-bottom: 140px;
@@ -55,6 +53,7 @@
 main {
   max-width: 1240px;
   margin: 0 auto;
+  z-index: 1;
 }
 
 .display-flex__allArea {
