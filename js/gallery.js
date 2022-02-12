@@ -171,3 +171,40 @@ $(function () {
     }
   });
 });
+
+//-----画像の切り替え---------
+
+// $(function () {
+//   var smallImg01 = $("#smallImage01").attr("src");
+//   var smallImg02 = $("#smallImage02").attr("src");
+//   var smallImg03 = $("#smallImage03").attr("src");
+//   var smallImg04 = $("#smallImage04").attr("src");
+//   var smallImg05 = $("#smallImage05").attr("src");
+
+//   console.log("画像1:" + smallImg01);
+//   console.log("画像2:" + smallImg02);
+//   console.log("画像3:" + smallImg03);
+//   console.log("画像4:" + smallImg04);
+//   console.log("画像5:" + smallImg05);
+
+//   $("#smallImage01").on("click", function () {
+//     console.log("gazou1");
+//     $("#mainImage").attr("src", smallImg01);
+//   });
+//   $("#smallImage02").on("click", function () {
+//     console.log("gazou2");
+//     $("#mainImage").attr("src", smallImg02);
+//   });
+//   $("#smallImage03").on("click", function () {
+//     console.log("gazou3");
+//     $("#mainImage").attr("src", smallImg03);
+//   });
+//   $("#smallImage04").on("click", function () {
+//     console.log("gazou4");
+//     $("#mainImage").attr("src", smallImg04);
+//   });
+//   $("#smallImage05").on("click", function () {
+//     console.log("gazou5");
+//     $("#mainImage").attr("src", smallImg05);
+//   });
+// });

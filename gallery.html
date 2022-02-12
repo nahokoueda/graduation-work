@@ -19,6 +19,7 @@
   </head>
 
   <body>
+    
     <header>
        <div class="header-wrapper">
           <div class="header-container">
@@ -160,127 +161,146 @@
     </header>
 
     <main>
-      <section class="gallery-bgArea">
-          <div class="gallery-bg">
+      <div id="app">
+          <section class="gallery-bgArea">
+              <div class="gallery-bg">
+                <div></div>
+              </div>
+              <div class="row gallery-area">
+                <div>
+                  <h2>Woman</h2>
+                </div>
+                
+                <div class="style-area__wrapper">
+                  <div class="style-photo_sub">
+                    <h3>ショート</h3>
+                    <div id="small-photo__area" class="small-photo__area">
+                      <div>
+                        <figure><img id="smallImage01"    @click="activate" 
+                        class="delay-time01" src="img/2short01.JPG" alt="ショート１"></figure>
+                        <figure><img
+                          id="smallImage02"
+                          @click="activate"
+                          class="delay-time02" src="img/2short02.JPG" alt="ショート２"></figure>
+                        <figure><img
+                          id="smallImage03"
+                          @click="activate" 
+                          class="delay-time03" src="img/2short03.JPG" alt="ショート３"></figure>
+                      </div>
+                      <div class="responsive-size">
+                        <figure><img id="smallImage04"
+                        @click="activate" 
+                        class="delay-time04" src="img/2short04.JPG" alt="ショート４"></figure>
+                        <figure><img
+                          id="smallImage05"
+                          @click="activate" 
+                          class="delay-time05" src="img/2short05.JPG" alt="ショート５"></figure>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="gallery-photo_main" class="gallery-photo_main">
+                    <!-- Vueの挿入 -->
+                    <figure><img 
+                      id="mainImage"
+                      class="img"
+                      :src="image.src"
+                      src="img/2short01.JPG" alt="ショート１"></figure>
+                  </div>
+                  <div class="style-subtitle">
+                  <p>Short hair</p>
+                  </div>
+                </div>
+            </div>
+          </section>
+
+          <section class="gallery-bgArea">
+            <div class="gallery-bg-m">
+              <div></div>
+            </div>
+            <div class="row gallery-area">
+              <div class="style-area__wrapper oposite">
+                <div class="style-photo_sub">
+                  <h3>ショート 〜 ミディアム</h3>
+                  <div id="small-photo__area2" class="small-photo__area">
+                    <div>
+                      <figure><img class="delay-time01" src="img/2mid01.JPG" alt="ミディアム１"></figure>
+                      <figure><img class="delay-time02" src="img/2mid02.jpeg" alt="ミディアム2"></figure>
+                      <figure><img class="delay-time03" src="img/2mid03.JPG" alt="ミディアム3"></figure>
+                    </div>
+                    <div class="responsive-size">
+                      <figure><img class="delay-time04" src="img/2mid04.jpeg" alt="ミディアム4"></figure>
+                      <figure><img class="delay-time05" src="img/2mid05.JPG" alt="ミディアム5"></figure>
+                    </div>
+                  </div>
+                </div>
+                <div id="gallery-photo_main2" class="gallery-photo_main">
+                  <figure><img src="img/2mid01.JPG" alt="ミディアム１"></figure>
+                </div>
+                <div class="style-subtitle-m">
+                <p>Short to Medium</p>
+                </div>
+              </div>
+          </div>
+        </section>
+
+        <section class="gallery-bgArea">
+          <div class="gallery-bg-l">
             <div></div>
           </div>
           <div class="row gallery-area">
-            <div>
-              <h2>Woman</h2>
-            </div>
-            
             <div class="style-area__wrapper">
               <div class="style-photo_sub">
-                <h3>ショート</h3>
-                <div id="small-photo__area" class="small-photo__area">
+                <h3>ロング</h3>
+                <div id="small-photo__area3" class="small-photo__area-l">
                   <div>
-                    <figure><img class="delay-time01" src="img/2short01.JPG" alt="ショート１"></figure>
-                    <figure><img class="delay-time02" src="img/2short02.JPG" alt="ショート２"></figure>
-                    <figure><img class="delay-time03" src="img/2short03.JPG" alt="ショート３"></figure>
+                    <figure><img class="delay-time01" src="img/2long01.JPG" alt="ロング１"></figure>
+                    <figure><img class="delay-time02" src="img/2long02.JPG" alt="ロング２"></figure>
                   </div>
                   <div class="responsive-size">
-                    <figure><img class="delay-time04" src="img/2short04.JPG" alt="ショート４"></figure>
-                    <figure><img class="delay-time05" src="img/2short05.JPG" alt="ショート５"></figure>
+                    <figure><img class="delay-time03" src="img/2long03.JPG" alt="ロング３"></figure>
                   </div>
                 </div>
               </div>
-              <div id="gallery-photo_main" class="gallery-photo_main">
-                <figure><img src="img/2short01.JPG" alt="ショート１"></figure>
+              <div id="gallery-photo_main3" class="gallery-photo_main">
+                <figure><img src="img/2long01.JPG" alt="ロング１"></figure>
               </div>
               <div class="style-subtitle">
-               <p>Short hair</p>
+              <p>Long hair</p>
               </div>
             </div>
-         </div>
+        </div>
       </section>
 
       <section class="gallery-bgArea">
-        <div class="gallery-bg-m">
-          <div></div>
-        </div>
+        <div class="gallery-bg-men"></div>
         <div class="row gallery-area">
+          <div>
+            <h2>MEN</h2>
+          </div>
           <div class="style-area__wrapper oposite">
             <div class="style-photo_sub">
-              <h3>ショート 〜 ミディアム</h3>
-              <div id="small-photo__area2" class="small-photo__area">
+              <!-- <h3></h3> -->
+              <div id="small-photo__area4" class="small-photo__area-men">
                 <div>
-                  <figure><img class="delay-time01" src="img/2mid01.JPG" alt="ミディアム１"></figure>
-                  <figure><img class="delay-time02" src="img/2mid02.jpeg" alt="ミディアム2"></figure>
-                  <figure><img class="delay-time03" src="img/2mid03.JPG" alt="ミディアム3"></figure>
+                  <figure><img class="delay-time01" src="img/2men01.JPG" alt="メン１"></figure>
+                  <figure><img src="img/2men02.JPG" alt="メン２"></figure>
                 </div>
-                <div class="responsive-size">
-                  <figure><img class="delay-time04" src="img/2mid04.jpeg" alt="ミディアム4"></figure>
-                  <figure><img class="delay-time05" src="img/2mid05.JPG" alt="ミディアム5"></figure>
+                <div class="men-margin">
+                  <figure><img class="delay-time02" src="img/2men03.JPG" alt="メン３"></figure>
+                  <figure><img class="delay-time03" src="img/2men04.JPG" alt="メン４"></figure>
                 </div>
               </div>
             </div>
-            <div id="gallery-photo_main2" class="gallery-photo_main">
-              <figure><img src="img/2mid01.JPG" alt="ミディアム１"></figure>
+            <div id="gallery-photo_main4" class="gallery-photo_main">
+              <figure><img src="img/2men01.JPG" alt="メン１"></figure>
             </div>
-            <div class="style-subtitle-m">
-             <p>Short to Medium</p>
+            <div class="style-subtitle-men">
+            <p>Style of men</p>
             </div>
           </div>
-       </div>
-    </section>
-
-    <section class="gallery-bgArea">
-      <div class="gallery-bg-l">
-        <div></div>
       </div>
-      <div class="row gallery-area">
-        <div class="style-area__wrapper">
-          <div class="style-photo_sub">
-            <h3>ロング</h3>
-            <div id="small-photo__area3" class="small-photo__area-l">
-              <div>
-                <figure><img class="delay-time01" src="img/2long01.JPG" alt="ロング１"></figure>
-                <figure><img class="delay-time02" src="img/2long02.JPG" alt="ロング２"></figure>
-              </div>
-              <div class="responsive-size">
-                <figure><img class="delay-time03" src="img/2long03.JPG" alt="ロング３"></figure>
-              </div>
-            </div>
-          </div>
-          <div id="gallery-photo_main3" class="gallery-photo_main">
-            <figure><img src="img/2long01.JPG" alt="ロング１"></figure>
-          </div>
-          <div class="style-subtitle">
-           <p>Long hair</p>
-          </div>
-        </div>
-     </div>
-  </section>
-
-  <section class="gallery-bgArea">
-    <div class="gallery-bg-men"></div>
-    <div class="row gallery-area">
-      <div>
-        <h2>MEN</h2>
-      </div>
-      <div class="style-area__wrapper oposite">
-        <div class="style-photo_sub">
-          <!-- <h3></h3> -->
-          <div id="small-photo__area4" class="small-photo__area-men">
-            <div>
-              <figure><img class="delay-time01" src="img/2men01.JPG" alt="メン１"></figure>
-              <figure><img src="img/2men02.JPG" alt="メン２"></figure>
-            </div>
-            <div class="men-margin">
-              <figure><img class="delay-time02" src="img/2men03.JPG" alt="メン３"></figure>
-              <figure><img class="delay-time03" src="img/2men04.JPG" alt="メン４"></figure>
-            </div>
-          </div>
-        </div>
-        <div id="gallery-photo_main4" class="gallery-photo_main">
-          <figure><img src="img/2men01.JPG" alt="メン１"></figure>
-        </div>
-        <div class="style-subtitle-men">
-         <p>Style of men</p>
-        </div>
-      </div>
+     </section>
    </div>
-</section>
     </main>
 
     <footer>
@@ -311,6 +331,41 @@
       </a>
     </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script>
+  new vue({
+    el: "#app",
+    date(){
+      return{
+      images: [
+        {
+            src:"img/2short01.JPG"
+        },
+        {
+            src:"img/2short02.JPG"
+        },
+        {
+            src:"img/2short03.JPG"
+        },
+        {
+            src:"img/2short04.JPG"
+        },
+        {
+            src:"img/2short05.JPG"
+        },
+      ]
+    };
+    },
+    methods:{
+      activate: function(){
+        this.isActive = this.isActive;
+      }
+    }
+  });
+
+</script>
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/common.js"></script>
