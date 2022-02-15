@@ -76,12 +76,16 @@ video {
   max-height: auto;
 }
 .subtitle-area {
+  position: relative;
   width: 928px;
+  height: 30px;
 }
 .subtitle-area h2 {
+  display: inline-block;
   position: absolute;
   top: 400px;
-  left: 340px;
+  right: 300px;
+  height: 30px;
   font-size: 2.4rem;
   color: #ffffff;
   letter-spacing: 0.1em;
@@ -95,6 +99,7 @@ video {
   padding-right: 8px;
   color: #707070;
   background-color: #ffffff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   width: 50px;
   height: 200px;
   text-align: center;
@@ -102,6 +107,24 @@ video {
   writing-mode: vertical-rl;
   z-index: 10;
 }
+.reserve-buttom:hover {
+  animation-name: hover-buttom;
+  animation-duration: 0.5s;
+  animation-delay: 0;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+@keyframes hover-buttom {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-10px);
+    background-image: linear-gradient(to right, #f9f9f9 0%, #f2db94 100%);
+  }
+}
+
 .reserve-buttom p {
   font-size: 3.2rem;
   writing-mode: vertical-rl;
@@ -151,6 +174,7 @@ video {
   .video-area {
     width: 100%;
     height: 100vw;
+    min-height: 800px;
     align-items: center;
     justify-content: center;
     margin-bottom: 0px;
@@ -224,6 +248,82 @@ video {
     font-weight: 300;
     font-style: normal;
     letter-spacing: 0.1em;
+  }
+}
+@media (max-width: 520px) {
+  .video-area {
+    height: 100vw;
+    min-height: 700px;
+  }
+  #Top-photo-area {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+  }
+  .title-area {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 40vw;
+    height: 0;
+  }
+  .header-container img {
+    width: 28vw;
+    height: 14vw;
+    z-index: 10;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+  }
+  .maintitle-area {
+    max-width: 500px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    width: 100vw;
+  }
+  .maintitle-area figure {
+    width: 100%;
+    height: auto;
+  }
+  .maintitle-area svg {
+    width: 100%;
+    max-height: auto;
+  }
+
+  .subtitle-area {
+    display: inline-block;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100vw;
+  }
+  .subtitle-area h2 {
+    display: inline-block;
+    margin: 0 auto;
+    width: 100vw;
+    max-width: 440px;
+    position: absolute;
+    right: 0;
+    font-size: 1.6rem;
+    /* top: 400px; */
+    /* right: 570px; */
+  }
+  .scroll {
+    display: inline-block;
+    position: absolute;
+    top: 460px;
+  }
+  .scroll img {
+    width: 30px;
+    height: 64px;
+    transform: translateY(0);
+    animation-name: scrollAnimation;
+    animation-duration: 2.5s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
   }
 }
 
@@ -367,7 +467,7 @@ video {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100px);
+    transform: translateX(-50px);
   }
 }
 /* .concept-area__intro h1 span {
@@ -481,25 +581,25 @@ video {
   }
   .concept-area__intro h1,
   .stylist-area__intro h1 {
-    margin: 50px 0 70px;
+    margin: 180px 0 70px;
   }
   .concept-area figure {
-    width: 60.486%;
-    height: 508px;
+    width: 489px;
+    height: 366px;
     position: relative;
   }
   .concept-area__photo img {
     position: absolute;
     object-fit: cover;
-    width: 100%; /* 60.483% */
-    height: auto;
+    width: 489px; /* 60.483% */
+    height: 366px;
   }
   .concept-bgArea {
     background-color: #f2db94;
     margin: 130px -50px;
     width: 100%; /* 60.483% */
-    height: 36vw;
-    max-height: 508px;
+    height: 489px;
+    max-height: 350px;
     box-shadow: -10px 10px 60px -30px gray;
   }
   .concept-area__photo img {
@@ -546,16 +646,17 @@ video {
   }
 
   .stylist-area figure {
-    width: 34.677%;
-    height: 40vw;
+    width: 282px;
+    height: 377px;
     position: relative;
   }
   .stylist-area__photo img {
     position: absolute;
+    bottom: 20px;
     margin-left: 0px;
-    width: 29.5vw; /* 34.677% */
+    width: 282px; /* 34.677% */
     max-width: 424px;
-    height: auto;
+    height: 377px;
     object-fit: cover;
     box-shadow: 10px 10px 60px -20px gray;
   }
@@ -584,7 +685,6 @@ video {
   height: 26vw;
 }
 .cutting-photo__Area img {
-  /* margin-top: -300px; */
   top: 70px;
   right: 0;
   position: absolute;
@@ -680,8 +780,8 @@ video {
     margin-bottom: 80px;
   }
   .cutting-brown__bg {
-    width: 57.847%;
-    height: 25vw;
+    width: 554px;
+    height: 239px;
     max-height: 360px;
     z-index: -1;
     box-shadow: 10px 10px 60px -20px gray;
@@ -696,15 +796,16 @@ video {
     height: 26vw;
   }
   .cutting-photo__Area img {
-    margin-top: -200px;
-    right: 0;
     position: absolute;
+    bottom: 0px;
+    right: 0;
     width: 69.444%;
     height: 31vw;
     object-fit: cover;
     object-position: 90% 0%;
     overflow: hidden;
     z-index: 1;
+    opacity: 0;
     /* box-shadow: 20px 20px 60px -30px gray; */
   }
   .cutting-words h2 {
@@ -719,6 +820,20 @@ video {
     text-align: left;
     padding-left: 140px;
     margin-top: 160px;
+  }
+  .scroll02 img {
+    position: relative;
+    /* display: block; */
+    /* top: 30px; */
+    width: 40px;
+    height: 110px;
+    bottom: 90px;
+    animation-name: scrollAnimation;
+    animation-duration: 2.5s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
   }
 }
 
@@ -793,6 +908,25 @@ video {
 a {
   text-decoration: none;
   cursor: pointer;
+}
+@media (max-width: 960px) {
+  .news-area {
+    max-width: 810px;
+    margin: 0 auto;
+    margin-bottom: 200px;
+  }
+  .news-title {
+    text-align: center;
+  }
+  .news-title h2 {
+    display: inline-block;
+    font-size: 4rem;
+    font-family: "prenton", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    padding: 0;
+    margin-bottom: 60px;
+  }
 }
 
 /*  calendar
@@ -1038,14 +1172,69 @@ a {
   margin-top: 60px;
 }
 .reserve-area h3 {
+  /* display: inline-block; */
+  color: #0f0f0f;
   font-size: 2.4rem;
   line-height: 6rem;
 }
-
+.reserve-area a {
+  pointer-events: none;
+}
+.reserve-area h3 span {
+  display: none;
+}
 @media (max-width: 960px) {
   .reserve-wrapper {
     max-width: 810px;
     margin-bottom: 150px;
+  }
+  .reserve-title h2 {
+    position: absolute;
+    left: 100px;
+    font-size: 10rem;
+  }
+  .reserve-area h2 {
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 6rem;
+    margin-top: 60px;
+  }
+}
+@media (max-width: 520px) {
+  .reserve-wrapper {
+    max-width: 440px;
+    margin-bottom: 150px;
+  }
+  .reserve-area {
+    min-width: 283px;
+    min-height: 280px;
+  }
+  .reserve-title h2 {
+    position: absolute;
+    left: 40px;
+    font-size: 8rem;
+  }
+  .reserve-area h2 {
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 6rem;
+    margin: 60px 0 20px;
+  }
+  .reserve-area a {
+    display: block;
+    margin-bottom: 0px;
+  }
+  .reserve-area h3 {
+    display: inline-block;
+    border-bottom: dotted 1px #707070;
+    font-size: 2.4rem;
+    line-height: 0rem;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+  }
+  .reserve-area h3 span {
+    height: 24px;
+    display: inline;
   }
 }
 
@@ -1122,15 +1311,45 @@ picture {
   margin-bottom: 150px;
 }
 .googlemap button {
+  width: 240px;
+  height: 50px;
+  border: none;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
   cursor: pointer;
 }
+.googlemap button:hover {
+  border: none;
+  color: #ffffff;
+  background-image: linear-gradient(to right, #f9f9f9 0%, #a65e44 100%);
+  animation-name: hover-area;
+  animation-duration: 0.5s;
+  animation-delay: 0;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+.googlemap button:hover p {
+  color: #ffffff;
+}
+.googlemap button:hover i {
+  color: #ffffff;
+}
+
+@keyframes hover-area {
+  100% {
+    background-image: linear-gradient(to right, #f9f9f9 0%, #a65e44 100%);
+  }
+}
+
 .googlemap p {
+  color: #707070;
   font-size: 2rem;
-  padding: 8px;
+  /* padding: 8px; */
   letter-spacing: 0.08rem;
 }
 .googlemap i {
-  padding-left: 6px;
+  font-size: 2.4rem;
+  padding-left: 10px;
   color: #707070;
 }
 @media (max-width: 960px) {
