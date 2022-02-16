@@ -254,7 +254,23 @@ video {
     writing-mode: horizontal-tb;
     z-index: 10;
   }
-
+  .reserve-buttom:hover {
+    animation-name: hover-buttom;
+    animation-duration: 0.5s;
+    animation-delay: 0;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+  }
+  @keyframes hover-buttom {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(10px);
+      background-image: linear-gradient(to right, #f9f9f9 0%, #f2db94 100%);
+    }
+  }
   .reserve-buttom p {
     padding-top: 10px;
     font-size: 3.2rem;
@@ -272,7 +288,7 @@ video {
   .video-area {
     height: 100vw;
     height: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
   }
   #Top-photo-area {
     width: 100%;
@@ -343,6 +359,7 @@ video {
     width: 100vw;
     max-width: 440px;
     position: absolute;
+    top: 300px;
     right: 10px;
     left: 10px;
     font-size: 1.6rem;
@@ -352,7 +369,7 @@ video {
   .scroll {
     display: inline-block;
     position: absolute;
-    top: 460px;
+    top: 360px;
   }
   .scroll img {
     width: 30px;
@@ -1614,6 +1631,12 @@ a {
   .reserve-area h3 span {
     height: 24px;
     display: inline;
+  }
+  a[href*="tel:"] {
+    pointer-events: none;
+  }
+  a[href*="tel:"] {
+    pointer-events: initial;
   }
 }
 

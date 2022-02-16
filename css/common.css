@@ -254,23 +254,37 @@ header nav.active.SlideToRight {
     top: 0;
     right: 0;
     width: 400px;
-    height: 100vw;
+    height: 100%;
     min-height: 600px;
   }
   .nav-list-area {
     margin: 0 auto;
+    flex-flow: column;
     justify-content: space-around;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     width: 320px;
+    height: 700px;
     margin-top: 60px;
+  }
+  .nav-list-area ul {
+    margin: 20px;
   }
   .nav-containar {
     margin: 0 auto;
     height: 80px;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 40px;
+  }
+  .nav-containar li:nth-last-of-type(1) {
+    display: block;
+  }
+  .nav-containar li:nth-last-of-type(3) {
+    /* width: 300px; */
+    height: 60px;
   }
   .nav-containar li {
     width: 150px;
@@ -278,9 +292,9 @@ header nav.active.SlideToRight {
   }
 
   .nav-containar__child {
-    display: none;
     display: flex;
-    justify-content: space-between;
+    /* flex-flow: column; */
+    justify-content: space-around;
     width: 150px;
     height: 60px;
     border-top: none;
@@ -303,12 +317,12 @@ header nav.active.SlideToRight {
     margin: 0 auto;
     /* margin-bottom: 20px; */
   }
-  .sp-ver {
-    width: 300px;
+  /* .sp-ver {
+    width: 150px;
   }
   .sp-ver p {
-    width: 300px;
-  }
+    width: 150px;
+  } */
 
   .nav-containar__child p:nth-of-type(1) {
     display: none;
@@ -326,6 +340,9 @@ header nav.active.SlideToRight {
   }
   .border-underline {
     border-bottom: none;
+  }
+  .sns-area00 i {
+    padding-top: 0px;
   }
 }
 
@@ -403,7 +420,7 @@ small {
   .toTop img {
     position: fixed;
     right: -30px;
-    bottom: 50px;
+    bottom: 65px;
     width: 140px;
     height: 100px;
   }
