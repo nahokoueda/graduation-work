@@ -396,6 +396,6 @@ small {
 @media (max-width: 960px) {
   .toTop img {
     position: fixed;
-    right: 0px;
+    right: -40px;
   }
 }
