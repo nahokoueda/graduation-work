@@ -622,7 +622,7 @@ video {
   }
   .concept-area__intro h1,
   .stylist-area__intro h1 {
-    margin: 180px 0 70px;
+    margin: 180px 0 70px 0;
   }
   .concept-area figure {
     width: 489px;
@@ -705,7 +705,7 @@ video {
 }
 @media (max-width: 520px) {
   .row {
-    max-width: 440px;
+    max-width: 390px;
     /* width: 86.111%; */
     margin: 0 auto;
     text-align: left;
@@ -726,7 +726,7 @@ video {
     height: auto;
     font-size: 10rem;
     margin-bottom: 72px;
-    margin-top: 20px;
+    margin-top: 30px;
     letter-spacing: 0.03em;
   }
   .conceptParagraph {
@@ -738,7 +738,7 @@ video {
   }
   .concept-area__intro h3 {
     font-size: 2.4rem;
-    line-height: 6.4rem;
+    line-height: 3.6rem;
     margin-bottom: 40px;
   }
   .concept-area figure {
@@ -767,7 +767,7 @@ video {
     /* display: block; */
     top: 320px;
     left: 0px;
-    width: 90%;
+    width: 100%;
     height: 52px;
     max-height: 86px;
   }
@@ -812,6 +812,40 @@ video {
     height: auto;
     object-fit: cover;
     box-shadow: 10px 10px 60px -20px gray;
+  }
+  .wordFlow {
+    animation-name: word-flow;
+    animation-duration: 8s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes word-flow {
+    0% {
+      opacity: 0;
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(30px);
+    }
+  }
+  stylist-area__intro h1.wordFlow2 {
+    animation-name: word-flow2;
+    animation-duration: 8s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes word-flow2 {
+    0% {
+      opacity: 0;
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(30px);
+    }
   }
 }
 /*  cutting-bg
@@ -1132,7 +1166,7 @@ a {
 }
 @media (max-width: 520px) {
   .news-area {
-    max-width: 810px;
+    max-width: 370px;
     margin: 0 auto;
     margin-bottom: 200px;
   }
@@ -1147,6 +1181,16 @@ a {
     font-style: normal;
     padding: 0;
     margin-bottom: 60px;
+  }
+  .news01,
+  .news02,
+  .news03 {
+    white-space: nowrap;
+  }
+  .news01 time,
+  .news02 time,
+  .news03 time {
+    font-size: 1.2rem;
   }
   .news01 h3,
   .news02 h3,
@@ -1347,6 +1391,110 @@ a {
     bottom: 200px;
   }
 }
+@media (max-width: 520px) {
+  .calendar-area__bg {
+    width: 100%;
+    height: 700px;
+    position: absolute;
+    overflow: hidden;
+  }
+  .calendarArea {
+    height: 700px;
+    margin-bottom: 200px;
+  }
+  .calendar-area {
+    position: relative;
+  }
+  .calendar-title__Area {
+    display: block;
+    text-align: center;
+    overflow-x: scroll;
+  }
+  .calendar-area h2 {
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 4rem;
+    padding-bottom: 10px;
+    margin: 60px;
+    border-bottom: solid 1px #909090;
+  }
+  .calendar-container__wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  .calendar-container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    line-height: 3.8rem;
+    text-align: center;
+  }
+  .calendar-container h3 {
+    font-size: 2.4rem;
+    margin-bottom: 32px;
+  }
+  .calendar-container span {
+    font-size: 4rem;
+    font-family: "prenton", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  .calendar {
+    display: inline-block;
+    font-family: "prenton", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  .calendar th,
+  .calendar td {
+    font-size: 1.4rem;
+    padding: 6px;
+    text-align: center;
+  }
+  .calendar th:nth-of-type(2) {
+    letter-spacing: -0.05em;
+    padding: 5px;
+  }
+  .calendar th:nth-of-type(6),
+  .calendar th:nth-of-type(7) {
+    letter-spacing: 0.2em;
+  }
+  .day {
+    margin-bottom: 10px;
+  }
+
+  .dayoff1 span {
+    display: inline-block;
+    font-size: 1.6rem;
+    width: 36px;
+    height: 36px;
+    background-color: #a65e44;
+    border-radius: 50%;
+    color: #ffffff;
+  }
+
+  .dayoff {
+    position: relative;
+    bottom: 400px;
+    display: block;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .circle {
+    display: inline-block;
+    background-color: #a65e44;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+  .dayoff h3 {
+    display: inline-block;
+    padding-left: 10px;
+  }
+}
 
 /*  reservation
 --------------------------------*/
@@ -1420,6 +1568,10 @@ a {
     left: 100px;
     font-size: 10rem;
   }
+  .reserve-area {
+    min-width: 360px;
+    min-height: 280px;
+  }
   .reserve-area h2 {
     display: inline-block;
     font-size: 1.6rem;
@@ -1433,7 +1585,7 @@ a {
     margin-bottom: 150px;
   }
   .reserve-area {
-    min-width: 283px;
+    min-width: 360px;
     min-height: 280px;
   }
   .reserve-title h2 {
@@ -1483,7 +1635,7 @@ a {
   font-family: "prenton", sans-serif;
   font-weight: 300;
   font-style: normal;
-  border-bottom: solid 1px #707070;
+  border-bottom: solid 1px #909090;
   padding-bottom: 16px;
   margin-bottom: 60px;
 }
@@ -1594,6 +1746,20 @@ picture {
     text-align: center;
     margin-bottom: 60px;
   }
+  .access-wrapper figure {
+    width: 460px;
+    height: 345px;
+    max-width: 691px;
+    max-height: 518px;
+  }
+  .access-wrapper img {
+    object-fit: cover;
+    width: 460px;
+    height: 345px;
+    max-width: 691px;
+    max-height: 518px;
+    box-shadow: -10px 20px 60px -50px gray;
+  }
   picture {
     display: block;
     max-width: 810px;
@@ -1613,5 +1779,74 @@ picture {
     margin: 0 auto;
     text-align: right;
     margin-bottom: 150px;
+  }
+}
+@media (max-width: 520px) {
+  .access-wrapper {
+    max-width: 340px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  .access-detail__area {
+    text-align: left;
+  }
+  .access-detail__area h2 {
+    font-size: 4rem;
+    padding-bottom: 16px;
+    margin-bottom: 60px;
+  }
+  .access-detail__area li {
+    font-size: 1.4rem;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.1rem;
+  }
+  .access-detail__area span {
+    font-size: 2rem;
+    letter-spacing: 0.05rem;
+    padding-right: 20px;
+  }
+  .access-wrapper figure {
+    width: 70vw;
+    height: auto;
+  }
+  .access-wrapper img {
+    object-fit: cover;
+    width: 100%; /* 56.451% */
+    height: auto;
+    box-shadow: -10px 20px 60px -50px gray;
+  }
+  picture {
+    /* max-width: 340px; */
+    display: block;
+    margin: 0 auto;
+  }
+  .picture-area {
+    margin: 0 auto;
+    position: relative;
+    width: 390px;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 60px;
+  }
+  .picture-area img {
+    width: 390px;
+    height: auto;
+    overflow: hidden;
+  }
+  .googlemap {
+    display: block;
+    max-width: 340px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 150px;
+  }
+  .googlemap button {
+    width: 240px;
+    height: 50px;
+    border: none;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
   }
 }

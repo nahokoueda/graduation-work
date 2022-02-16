@@ -399,3 +399,12 @@ small {
     right: -40px;
   }
 }
+@media (max-width: 520px) {
+  .toTop img {
+    position: fixed;
+    right: -30px;
+    bottom: 50px;
+    width: 140px;
+    height: 100px;
+  }
+}
