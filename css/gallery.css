@@ -164,7 +164,7 @@ header {
 }
 
 .gallery-photo_main {
-  width: 383px;
+  width: 40vw;
   height: auto;
 }
 .gallery-photo_main figure {
@@ -295,6 +295,10 @@ header {
   }
   .small-photo__area figure {
     margin-bottom: 32px;
+  }
+  .gallery-photo_main {
+    width: 383px;
+    height: 493px;
   }
   .gallery-photo_main figure {
     /* padding-top: 30px; */

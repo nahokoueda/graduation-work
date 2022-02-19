@@ -174,26 +174,28 @@
                 <div class="style-area__wrapper">
                   <div class="style-photo_sub">
                     <h3>ショート</h3>
-                    <div id="small-photo__area" class="small-photo__area">
+                    <div id="small-photo__area"
+                    class="small-photo__area">
                       <div>
-                        <figure><img id="smallImage01"    @click="activate" 
+                        <figure><img id="smallImage01"    
+                        @click="activate1" 
                         class="delay-time01" src="img/2short01.JPG" alt="ショート１"></figure>
                         <figure><img
                           id="smallImage02"
-                          @click="activate"
+                          @click="activate2"
                           class="delay-time02" src="img/2short02.JPG" alt="ショート２"></figure>
                         <figure><img
                           id="smallImage03"
-                          @click="activate" 
+                          @click="activate3" 
                           class="delay-time03" src="img/2short03.JPG" alt="ショート３"></figure>
                       </div>
                       <div class="responsive-size">
                         <figure><img id="smallImage04"
-                        @click="activate" 
+                        @click="activate4" 
                         class="delay-time04" src="img/2short04.JPG" alt="ショート４"></figure>
                         <figure><img
                           id="smallImage05"
-                          @click="activate" 
+                          @click="activate5" 
                           class="delay-time05" src="img/2short05.JPG" alt="ショート５"></figure>
                       </div>
                     </div>
@@ -203,8 +205,8 @@
                     <figure><img 
                       id="mainImage"
                       class="img"
-                      :src="image.src"
-                      src="img/2short01.JPG" alt="ショート１"></figure>
+                      :src="images[imgIndex].src"
+                      alt="ショート１"></figure>
                   </div>
                   <div class="style-subtitle">
                   <p>Short hair</p>
@@ -333,9 +335,9 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 <script>
-  new vue({
+  new Vue({
     el: "#app",
-    date(){
+    data(){
       return{
       images: [
         {
@@ -353,12 +355,35 @@
         {
             src:"img/2short05.JPG"
         },
-      ]
-    };
+      ],
+      imgIndex : 0
+    }
     },
     methods:{
-      activate: function(){
-        this.isActive = this.isActive;
+      activate1: function(){
+        console.log('activate1呼ばれたよ')
+        // this.isActive = this.isActive;
+        this.imgIndex = 0
+      },
+      activate2: function(){
+        console.log('activate2呼ばれたよ')
+        // this.isActive = this.isActive;
+        this.imgIndex = 1
+      },
+      activate3: function(){
+        console.log('activate3呼ばれたよ')
+        // this.isActive = this.isActive;
+        this.imgIndex = 2
+      },
+      activate4: function(){
+        console.log('activate4呼ばれたよ')
+        // this.isActive = this.isActive;
+        this.imgIndex = 3
+      },
+      activate5: function(){
+        console.log('activate5呼ばれたよ')
+        // this.isActive = this.isActive;
+        this.imgIndex = 4
       }
     }
   });
