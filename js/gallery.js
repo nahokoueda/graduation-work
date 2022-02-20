@@ -208,3 +208,90 @@ $(function () {
 //     $("#mainImage").attr("src", smallImg05);
 //   });
 // });
+
+$(function () {
+  var smallImg01 = $("#smallImage-m01").attr("src");
+  var smallImg02 = $("#smallImage-m02").attr("src");
+  var smallImg03 = $("#smallImage-m03").attr("src");
+  var smallImg04 = $("#smallImage-m04").attr("src");
+  var smallImg05 = $("#smallImage-m05").attr("src");
+
+  console.log("画像1:" + smallImg01);
+  console.log("画像2:" + smallImg02);
+  console.log("画像3:" + smallImg03);
+  console.log("画像4:" + smallImg04);
+  console.log("画像5:" + smallImg05);
+
+  $("#smallImage-m01").on("click", function () {
+    console.log("gazou1");
+    $("#mainImage2").attr("src", smallImg01);
+  });
+  $("#smallImage-m02").on("click", function () {
+    console.log("gazou2");
+    $("#mainImage2").attr("src", smallImg02);
+  });
+  $("#smallImage-m03").on("click", function () {
+    console.log("gazou3");
+    $("#mainImage2").attr("src", smallImg03);
+  });
+  $("#smallImage-m04").on("click", function () {
+    console.log("gazou4");
+    $("#mainImage2").attr("src", smallImg04);
+  });
+  $("#smallImage-m05").on("click", function () {
+    console.log("gazou5");
+    $("#mainImage2").attr("src", smallImg05);
+  });
+});
+
+$(function () {
+  var smallImg01 = $("#smallImage-l01").attr("src");
+  var smallImg02 = $("#smallImage-l02").attr("src");
+  var smallImg03 = $("#smallImage-l03").attr("src");
+
+  console.log("画像1:" + smallImg01);
+  console.log("画像2:" + smallImg02);
+  console.log("画像3:" + smallImg03);
+
+  $("#smallImage-l01").on("click", function () {
+    console.log("gazou1");
+    $("#mainImage3").attr("src", smallImg01);
+  });
+  $("#smallImage-l02").on("click", function () {
+    console.log("gazou2");
+    $("#mainImage3").attr("src", smallImg02);
+  });
+  $("#smallImage-l03").on("click", function () {
+    console.log("gazou3");
+    $("#mainImage3").attr("src", smallImg03);
+  });
+});
+
+$(function () {
+  var smallImg01 = $("#smallImage-men01").attr("src");
+  var smallImg02 = $("#smallImage-men02").attr("src");
+  var smallImg03 = $("#smallImage-men03").attr("src");
+  var smallImg04 = $("#smallImage-men04").attr("src");
+
+  console.log("画像1:" + smallImg01);
+  console.log("画像2:" + smallImg02);
+  console.log("画像3:" + smallImg03);
+  console.log("画像4:" + smallImg04);
+
+  $("#smallImage-men01").on("click", function () {
+    console.log("gazou1");
+    $("#mainImage4").attr("src", smallImg01);
+  });
+  $("#smallImage-men02").on("click", function () {
+    console.log("gazou2");
+    $("#mainImage4").attr("src", smallImg02);
+  });
+  $("#smallImage-men03").on("click", function () {
+    console.log("gazou3");
+    $("#mainImage4").attr("src", smallImg03);
+  });
+  $("#smallImage-men04").on("click", function () {
+    console.log("gazou4");
+    $("#mainImage4").attr("src", smallImg04);
+  });
+});

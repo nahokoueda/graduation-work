@@ -94,7 +94,6 @@ header {
   margin-bottom: 40px;
   letter-spacing: 0.08rem;
 }
-
 .style-photo_sub figure {
   width: 12vw; /* 14.112%*/
   height: auto;
@@ -167,6 +166,7 @@ header {
   width: 40vw;
   height: auto;
 }
+
 .gallery-photo_main figure {
   /* padding-top: 30px; */
   width: 40vw;
@@ -180,7 +180,23 @@ header {
   max-width: 600px;
   max-height: 748px;
   object-fit: cover;
+  animation-name: fuwa;
+  animation-duration: 3s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  opacity: 0;
 }
+@keyframes fuwa {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .gallery-photo_main img.fadeFade {
   animation-name: fadefade;
   animation-duration: 2s;
