@@ -87,7 +87,7 @@ EOM;
     <title>Contact-check</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/contact-check.css" />
+    <link rel="stylesheet" href="css/contact-confirm.css" />
     <link
       href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
       rel="stylesheet"
