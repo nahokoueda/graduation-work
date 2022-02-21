@@ -1,3 +1,83 @@
+<?php 
+    // フォームのボタンが押されたら
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // フォームから送信されたデータを各変数に格納
+        $radioChoice = $_POST["radioChoice"];
+        $name = $_POST["name"];
+        $furigana = $_POST["furigana"];
+        $tel = $_POST["tel"];
+        $email = $_POST["email"];
+        $emailCheck = $_POST["emailCheck"];
+        $message  = $_POST["message"];
+    }
+
+    // 送信ボタンが押されたら
+    if (isset($_POST["submit"])) {
+        // 送信ボタンが押された時に動作する処理をここに記述する
+            
+        // 日本語をメールで送る場合のおまじない
+            mb_language("ja");
+        mb_internal_encoding("UTF-8");
+        
+        //mb_send_mail("kanda.it.school.trial@gmail.com", "メール送信テスト", "メール本文");
+
+            // 件名を変数subjectに格納
+            $subject = "［自動送信］お問い合わせ内容の確認";
+
+            // メール本文を変数bodyに格納
+        $body = <<< EOM
+{$name}　様
+
+お問い合わせありがとうございます。
+以下のお問い合わせ内容を、メールにて確認させていただきました。
+
+===================================================
+【 お問い合わせ項目 】 
+{$radioChoice}
+
+【 お名前 】 
+{$name}
+
+【 ふりがな 】 
+{$furigana}
+
+【 電話番号 】 
+{$tel}
+
+【 メールアドレス 】 
+{$email}
+
+【 メールアドレスの確認 】 
+{$emailCheck}
+
+【 内容 】 
+{$message}
+===================================================
+
+内容を確認のうえ、回答させて頂きます。
+しばらくお待ちください。
+EOM;
+        
+        // 送信元のメールアドレスを変数fromEmailに格納
+        $fromEmail = "blue-forest.et.apple@hotmail.co.jp";
+
+        // 送信元の名前を変数fromNameに格納
+        $fromName = "お問い合わせテスト";
+
+        // ヘッダ情報を変数headerに格納する      
+        $header = "From: " .mb_encode_mimeheader($fromName) ."<{$fromEmail}>";
+
+        // メール送信を行う
+        mb_send_mail($email, $subject, $body, $header);
+
+        // サンクスページに画面遷移させる
+        header("Location: http://testapp.hippy.jp/contact/thanks.php");
+        exit;
+    }
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -173,14 +253,53 @@
         <div class="attention-wrapper">
           <div class="attention-text">
             <h3>内容確認</h3>
-            <p>
-              お問い合わせ内容はこちらで宜しいでしょうか。<br />
-              よろしければ「送信する」ボタンを押して下さい。
-            </p>
+            <form action="contact-confirm.php" method="post">
+                <input type="hidden" name="radioChoice" value="<?php echo $radioChoice; ?>">
+                <input type="hidden" name="name" value="<?php echo $name; ?>">
+                <input type="hidden" name="furigana" value="<?php echo $furigana; ?>">
+                <input type="hidden" name="tel" value="<?php echo $tel; ?>">
+                <input type="hidden" name="email" value="<?php echo $email; ?>">
+                <input type="hidden" name="emailCheck" value="<?php echo $emailCheck; ?>">
+                <input type="hidden" name="$message" value="<?php echo $$message; ?>">
+                <p>お問い合わせ内容はこちらで宜しいでしょうか？<br>よろしければ「送信する」ボタンを押して下さい。</p>
+                <div>
+                    <div>
+                        <label>お問い合わせ項目</label>
+                        <p><?php echo $radioChoice; ?></p>
+                    </div>
+                    <div>
+                        <label>お名前</label>
+                        <p><?php echo $name; ?></p>
+                    </div>
+                    <div>
+                        <label>ふりがな</label>
+                        <p><?php echo $furigana; ?></p>
+                    </div>
+                    <div>
+                        <label>電話番号</label>
+                        <p><?php echo $tel; ?></p>
+                    </div>
+                    <div>
+                        <label>メールアドレス</label>
+                        <p><?php echo $email; ?></p>
+                    </div>
+                    <div>
+                        <label>メールアドレスの確認</label>
+                        <p><?php echo $emailCheck; ?></p>
+                    </div>
+                    <div>
+                        <label>お問い合わせ内容</label>
+                        <p><?php echo nl2br($message); ?></p>
+                    </div>
+                </div>
+                <input type="button" value="内容を修正する" onclick="history.back(-1)">
+                <button type="submit" name="submit">送信する</button>
+            </form>
           </div>
         </div>
       </section>
     </main>
+
     <footer>
       <div class="filiter-bg">
         <div class="footer-logo">

@@ -74,65 +74,10 @@
     font-size: 1.6rem;
   }
 }
-
-/*  attention
-  --------------------------------*/
-.attention-area {
-  max-width: 1240px;
-  width: 86.111%;
-  margin: 0 auto;
-  margin-bottom: 40px;
-}
-
-.attention-wrapper {
-  background-color: #ededed;
-  width: 50vw;
-  /* height: 260px; */
-  max-width: 933px;
-  margin: 0 auto;
-}
-.attention-text {
-  padding: 40px;
-}
-.attention-wrapper h3 {
-  padding-bottom: 20px;
-  font-size: 2.4rem;
-  font-weight: 500;
-  letter-spacing: 0.4rem;
-}
-.attention-wrapper h3 span {
-  color: #ff0000;
-}
-
-@media (max-width: 960px) {
-  .attention-wrapper {
-    width: 60vw;
-    height: 300px;
-    max-width: 810px;
-    margin: 0 auto;
-  }
-  .attention-text {
-    padding: 40px;
-  }
-  .attention-wrapper h3 {
-    padding-bottom: 20px;
-  }
-}
-@media (max-width: 520px) {
-  .attention-wrapper {
-    width: 60vw;
-    height: 400px;
-    max-width: 440px;
-    margin: 0 auto;
-  }
-  .attention-text {
-    padding: 20px;
-  }
-}
 /*  check-number
   --------------------------------*/
 .checkArea {
-  margin-bottom: 160px;
+  margin-bottom: 100px;
 }
 .check-numberArea {
   width: 38vw;
@@ -167,5 +112,60 @@
 @media (max-width: 520px) {
   .check-numberArea ul span {
     font-size: 1.6rem;
+  }
+}
+
+/*  attention
+  --------------------------------*/
+.attention-area {
+  max-width: 1240px;
+  width: 86.111%;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.attention-wrapper {
+  background-color: #ededed;
+  width: 50vw;
+  /* height: 260px; */
+  max-width: 933px;
+  margin: 0 auto;
+}
+.attention-text {
+  padding: 40px;
+}
+.attention-wrapper h3 {
+  padding-bottom: 20px;
+  font-size: 3.2rem;
+  font-weight: 500;
+  letter-spacing: 0.4rem;
+}
+.attention-wrapper h3 span {
+  color: #ff0000;
+}
+
+@media (max-width: 960px) {
+  .attention-wrapper {
+    width: 60vw;
+    height: 300px;
+    max-width: 810px;
+    margin: 0 auto;
+  }
+  .attention-text {
+    padding: 40px;
+  }
+  .attention-wrapper h3 {
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 520px) {
+  .attention-wrapper {
+    width: 60vw;
+    height: 400px;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  .attention-text {
+    padding: 20px;
   }
 }
