@@ -18,14 +18,6 @@
   height: 600px;
   background-color: rgba(0, 0, 0, 0.2);
 }
-.header-container img {
-  width: 142px;
-  height: 74px;
-  z-index: 10;
-  position: absolute;
-  top: 30px;
-  left: 30px;
-}
 .row {
   max-width: 1240px;
   width: 86.111%;
@@ -47,7 +39,29 @@
   letter-spacing: 0.1em;
   line-height: 8rem;
 }
-
+@media (max-width: 960px) {
+  section {
+    overflow: hidden;
+  }
+}
+@media (max-width: 520px) {
+  .header-bg__fixed {
+    position: relative;
+    background: url(../img/3menuTop03@2x.jpg) no-repeat 70% 0%;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    width: 100vw;
+    height: 600px;
+    margin-bottom: 140px;
+  }
+  .subtitle-area h2 {
+    font-size: 4rem;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    line-height: 8rem;
+  }
+}
 /*  main cut~color
 --------------------------------*/
 main {
@@ -236,14 +250,8 @@ main {
     text-align: left;
     border-bottom: solid 1px #707070;
   }
-  .cut-area,
-  .color-perm-area {
-    width: 42.177%;
-  }
   .display-flex__allArea th {
-    width: 14.5vw;
-    min-width: 208px;
-    min-height: 72px;
+    width: 268px;
     text-align: left;
     line-height: 2rem;
   }
@@ -254,6 +262,28 @@ main {
   .display-flex__allArea td:nth-of-type(1) {
     display: none;
   }
+  .cut-area,
+  .color-perm-area {
+    width: 341px;
+    min-width: 341px;
+    margin: 0 auto;
+  }
+  .cut-price {
+    margin-bottom: 30px;
+  }
+  .color-perm-area {
+    margin-top: 30px;
+  }
+  .cut-area figure {
+    width: 345px;
+    height: 412px;
+  }
+  .cut-area figure img {
+    width: 345px;
+    height: 412px;
+  }
+}
+@media (max-width: 520px) {
 }
 
 /*  haircare
@@ -380,6 +410,22 @@ main {
   .display-flex__allArea2 p {
     white-space: normal;
   }
+  .haircare-area,
+  .haircare-photo {
+    width: 345px;
+    margin: 0 auto;
+  }
+  .haircare-area {
+    margin-top: 30px;
+  }
+  .haircare-photo figure {
+    width: 345px;
+    height: 412px;
+  }
+  .haircare-photo figure img {
+    width: 345px;
+    height: 412px;
+  }
 }
 
 /*  headspa
@@ -493,6 +539,10 @@ main {
   margin-bottom: 60px;
 }
 @media (max-width: 960px) {
+  .spa-area,
+  .spa-photo {
+    width: 345px;
+  }
   .display-flex__allArea3 {
     flex-flow: column;
     align-items: center;
@@ -500,6 +550,14 @@ main {
   }
   .spa-photo figure {
     margin-bottom: 60px;
+  }
+  .spa-photo figure {
+    width: 345px;
+    height: 316px;
+  }
+  .spa-photo figure img {
+    width: 345px;
+    height: 316px;
   }
 }
 /*  info
@@ -592,16 +650,31 @@ main {
   }
 }
 @media (max-width: 960px) {
+  .info-area {
+    margin-top: 30px;
+  }
+  .info-area,
+  .info-photo {
+    width: 345px;
+  }
   .display-flex__allArea4 {
     flex-flow: column;
     flex-direction: column-reverse;
     align-items: center;
     flex-wrap: wrap;
   }
+  .display-flex__allArea4 h2 {
+    margin-bottom: 0px;
+  }
   .display-flex__allArea3 {
     margin-bottom: 0px;
   }
   .info-photo figure {
-    margin-bottom: 40px;
+    width: 345px;
+    height: 287px;
+  }
+  .info-photo figure img {
+    width: 345px;
+    height: 287px;
   }
 }
