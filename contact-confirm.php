@@ -84,7 +84,8 @@ EOM;
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact-check</title>
+    <meta name="format-detection" content="telephone=no">
+    <title>Contact-confirm</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/contact-confirm.css" />
@@ -253,7 +254,7 @@ EOM;
         <div class="attention-wrapper">
           <div class="attention-text">
             <h3>内容確認</h3>
-            <form action="contact-confirm.php" method="post">
+            <form action="contact-thanks.php" method="post">
                 <input type="hidden" name="radioChoice" value="<?php echo $radioChoice; ?>">
                 <input type="hidden" name="name" value="<?php echo $name; ?>">
                 <input type="hidden" name="furigana" value="<?php echo $furigana; ?>">
