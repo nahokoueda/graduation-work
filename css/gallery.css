@@ -46,7 +46,7 @@ header {
     background: url(../img/2galleryTop.jpeg) no-repeat center center;
     background-attachment: fixed;
     background-size: cover;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100vw;
     height: 100%;
     margin-bottom: 140px;
@@ -63,14 +63,14 @@ header {
     background: url(../img/2galleryTop.jpeg) no-repeat 5% 0%;
     background-attachment: fixed;
     background-size: cover;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100vw;
     height: 100%;
     margin-bottom: 30px;
   }
   .header-wrapper {
     width: 100vw;
-    height: 100%;
+    height: 600px;
     min-height: 460px;
     background-color: rgba(0, 0, 0, 0.1);
   }
