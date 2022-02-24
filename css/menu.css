@@ -40,17 +40,25 @@
   line-height: 8rem;
 }
 @media (max-width: 960px) {
-  section {
+  .row {
+    max-width: 810px;
+  }
+  .header-wrapper {
+    max-width: 810px;
     overflow: hidden;
   }
 }
 @media (max-width: 520px) {
+  .row {
+    max-width: 440px;
+  }
   .header-bg__fixed {
+    max-width: 440px;
     position: relative;
-    background: url(../img/3menuTop03@2x.jpg) no-repeat 70% 0%;
+    background: url(../img/3menuTop03@2x.jpg) no-repeat 70% 100%;
     background-attachment: fixed;
     background-size: cover;
-    /* overflow: hidden; */
+    overflow: hidden;
     width: 100vw;
     height: 600px;
     margin-bottom: 140px;

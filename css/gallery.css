@@ -12,6 +12,7 @@ header {
   background-size: cover;
   width: 100vw;
   height: 600px;
+  /* height: 600px; */
   margin-bottom: 140px;
 }
 .header-wrapper {
@@ -46,9 +47,9 @@ header {
     background: url(../img/2galleryTop.jpeg) no-repeat center center;
     background-attachment: fixed;
     background-size: cover;
-    /* overflow: hidden; */
+    overflow: hidden;
     width: 100vw;
-    height: 100%;
+    height: 600px;
     margin-bottom: 140px;
   }
   .header-wrapper {
@@ -60,10 +61,10 @@ header {
 @media (max-width: 520px) {
   header {
     position: relative;
-    background: url(../img/2galleryTop.jpeg) no-repeat 5% 0%;
+    background: url(../img/2galleryTop.jpeg) no-repeat 0% 100%;
     background-attachment: fixed;
     background-size: cover;
-    /* overflow: hidden; */
+    overflow: hidden;
     width: 100vw;
     height: 100%;
     margin-bottom: 30px;
