@@ -108,52 +108,52 @@ header nav {
   height: 100vh;
   z-index: 35;
   background-color: rgb(000, 000, 000, 0.8);
-  /* display: none; */
+  display: none;
   opacity: 0;
   pointer-events: none;
   transition-property: all;
   transition-duration: 0.6;
   transition-delay: 0;
   transition-timing-function: ease-in-out;
+  left: 0;
 }
 
 /* JQ動作 */
 
 header nav.active {
+  display: block;
   opacity: 1;
   pointer-events: auto;
 }
 header nav.slideRight {
-  /* animation-name: slideright;
+  animation-name: slideright;
   animation-duration: 1s;
   animation-delay: 0;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
-  animation-fill-mode: both; */
+  animation-fill-mode: both;
   transition-property: all;
   transition-duration: 1s;
   transition-delay: 0;
   transition-timing-function: ease-in-out;
-  left: 0;
 }
 
 header nav {
-  animation-name: slideright_reverse;
   transition-property: all;
   transition-duration: 1s;
   transition-delay: 0;
   transition-timing-function: ease-in-out;
   left: 100%;
 }
-/* @keyframes slideright {
+@keyframes slideright {
   0% {
-    left: 1440px;
+    left: 100%;
   }
   100% {
     left: 0;
   }
-} */
-header nav.active.SlideToRight {
+}
+/* header nav.active.SlideToRight {
   animation-name: slidetoright;
   animation-duration: 1s;
   animation-delay: 0;
@@ -168,7 +168,7 @@ header nav.active.SlideToRight {
   100% {
     left: 1440px;
   }
-}
+} */
 
 .nav-wrapper {
   position: absolute;

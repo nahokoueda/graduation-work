@@ -45,7 +45,7 @@
   }
   .header-wrapper {
     max-width: 810px;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 }
 @media (max-width: 520px) {
@@ -58,7 +58,7 @@
     background: url(../img/3menuTop03@2x.jpg) no-repeat 70% 100%;
     background-attachment: fixed;
     background-size: cover;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100vw;
     height: 600px;
     margin-bottom: 140px;
