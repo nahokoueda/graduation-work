@@ -74,6 +74,24 @@
     font-size: 1.6rem;
   }
 }
+@media (max-width: 520px) {
+  .contact-relative {
+    height: 300px;
+  }
+  .contact-bgArea h1 {
+    font-size: 4rem;
+    padding-top: 30px;
+  }
+  .header-container img {
+    width: 28vw;
+    height: 14vw;
+    z-index: 10;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+  }
+}
 
 /*  attention
 --------------------------------*/
@@ -106,7 +124,7 @@
 @media (max-width: 960px) {
   .attention-wrapper {
     width: 60vw;
-    height: 300px;
+    /* height: 300px; */
     max-width: 810px;
     margin: 0 auto;
   }
@@ -120,7 +138,7 @@
 @media (max-width: 520px) {
   .attention-wrapper {
     width: 60vw;
-    height: 400px;
+    /* height: 400px; */
     max-width: 440px;
     margin: 0 auto;
   }
@@ -163,7 +181,38 @@
 .check-numberArea li:nth-of-type(1) {
   border-bottom: solid 3px #a0a654;
 }
+@media (max-width: 960px) {
+  .checkArea {
+    max-width: 810px;
+    /* height: 43px; */
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+  .check-numberArea {
+    width: 300px;
+    margin-bottom: 75px;
+  }
+  .check-numberArea ul {
+    width: 300px;
+    margin: 0 auto;
+  }
+  .check-numberArea ul li {
+    margin: 0 10px;
+  }
+  .check-numberArea ul div {
+    display: none;
+  }
+}
 @media (max-width: 520px) {
+  .checkArea {
+    max-width: 370px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .check-numberArea ul {
+    width: 250px;
+    margin: 0 auto;
+  }
   .check-numberArea ul span {
     font-size: 1.6rem;
   }
@@ -197,7 +246,7 @@ section {
   background-color: #ffffff;
   width: 37vw;
   height: 72px;
-  min-width: 375px;
+  min-width: 340px;
   max-width: 532px;
   max-height: 72px;
   border: solid 1px #000000;
@@ -231,7 +280,7 @@ section {
   border: solid 1px #000000;
   width: 70vw;
   height: 57px;
-  min-width: 375px;
+  min-width: 340px;
   max-width: 1008px;
   max-height: 57px;
 }
@@ -251,7 +300,7 @@ section {
   border: solid 1px #000000;
   width: 70vw;
   height: 57px;
-  min-width: 375px;
+  min-width: 340px;
   max-width: 1008px;
   max-height: 57px;
 }
@@ -271,7 +320,7 @@ section {
   border: solid 1px #000000;
   width: 35vw;
   height: 57px;
-  min-width: 375px;
+  min-width: 340px;
   max-width: 504px;
   max-height: 57px;
 }
@@ -291,7 +340,7 @@ section {
   border: solid 1px #000000;
   width: 70vw;
   height: 57px;
-  min-width: 375px;
+  min-width: 340px;
   max-width: 1008px;
   max-height: 57px;
 }
@@ -311,7 +360,7 @@ section {
   border: solid 1px #000000;
   width: 70vw;
   height: 57px;
-  min-width: 375px;
+  min-width: 340px;
   max-width: 1008px;
   max-height: 57px;
 }
@@ -358,4 +407,46 @@ section {
   border-radius: 50px;
   box-shadow: 3px 3px 3px gray;
   border: none;
+}
+@media (max-width: 520px) {
+  .form-area h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  .name-area label {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  .furigana-area label {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  .tel-area label {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  .email-area label {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  .emailKakunin-area label {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  .inquirydetail-area label {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  .inquirydetail-area label {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  .click-button input {
+    font-size: 2.4rem;
+    width: 320px;
+    height: 60px;
+    border-radius: 50px;
+    box-shadow: 3px 3px 3px gray;
+    border: none;
+  }
 }

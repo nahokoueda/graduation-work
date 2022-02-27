@@ -830,7 +830,7 @@ video {
       transform: translateX(30px);
     }
   }
-  stylist-area__intro h1.wordFlow2 {
+  .stylist-area__intro h1.wordFlow2 {
     animation-name: word-flow2;
     animation-duration: 8s;
     animation-delay: 0s;
@@ -1041,12 +1041,14 @@ video {
   }
   .cutting-photo__Area img {
     position: absolute;
+    top: 100px;
     bottom: 0px;
     right: 0;
     width: 100%;
     height: 40vw;
     object-fit: cover;
     object-position: 90% 0%;
+    opacity: 1;
   }
   .cutting-words h2 {
     position: absolute;

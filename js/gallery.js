@@ -225,7 +225,15 @@ $(function () {
   $("#smallImage-m01").on("click", function () {
     console.log("gazou1");
     $("#mainImage2").attr("src", smallImg01);
+    // $("#mainImage2").fadeOut(50, function () {
+    //   $("#smallImage-m01")
+    //     .attr("src", img)
+    //     .on("load", function () {
+    //       $(this).fadeIn(1000);
+    //     });
+    // });
   });
+
   $("#smallImage-m02").on("click", function () {
     console.log("gazou2");
     $("#mainImage2").attr("src", smallImg02);

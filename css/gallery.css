@@ -59,6 +59,7 @@ header {
     background: url(../img/2galleryTop.jpeg) no-repeat 0% 0%;
     background-attachment: fixed;
     background-size: cover;
+    -webkit-background-size: cover;
     width: 100vw;
     height: 600px;
     margin-bottom: 140px;
@@ -76,6 +77,7 @@ header {
     background: url(../img/2galleryTop.jpeg) no-repeat 0% 0%;
     background-attachment: fixed;
     background-size: cover;
+    -webkit-background-size: cover;
     /* overflow: hidden; */
     width: 100vw;
     height: 600px;
