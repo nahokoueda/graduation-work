@@ -405,7 +405,7 @@ header {
   }
   .gallery-photo_main {
     width: 70vw;
-    height: 493px;
+    height: 450px;
     min-width: 300px;
     min-height: 400px;
   }
@@ -422,6 +422,9 @@ header {
     min-width: 300px;
     min-height: 400px;
     object-fit: cover;
+  }
+  .gallery-area h3 {
+    margin-top: 0px;
   }
   .gallery-bg {
     display: inline-block;
