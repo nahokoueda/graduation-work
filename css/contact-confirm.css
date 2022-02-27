@@ -74,7 +74,46 @@
     font-size: 1.6rem;
   }
 }
-
+/*  check-number
+--------------------------------*/
+.checkArea {
+  margin-bottom: 160px;
+}
+.check-numberArea {
+  width: 38vw;
+  height: 3vw;
+  max-width: 550px;
+  max-height: 35px;
+  margin: 0 auto;
+  margin-bottom: 75px;
+}
+.check-numberArea ul {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.check-numberArea ul div {
+  width: 4vw;
+  height: 1px;
+  border-bottom: solid 1px #707070;
+}
+.check-numberArea ul span {
+  font-size: 2.4rem;
+}
+.check-numberArea ul li {
+  white-space: nowrap;
+  padding-bottom: 8px;
+  margin-left: 20px;
+}
+.check-numberArea li:nth-of-type(1) {
+  border-bottom: solid 3px #a0a654;
+}
+@media (max-width: 520px) {
+  .check-numberArea ul span {
+    font-size: 1.6rem;
+  }
+}
 /*  attention
   --------------------------------*/
 .attention-area {
@@ -99,7 +138,12 @@
 }
 
 form p {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
+}
+.input-submit {
+  width: 200px;
+  height: 100px;
+  background-color: #f2db94;
 }
 
 @media (max-width: 960px) {

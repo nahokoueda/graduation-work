@@ -10,12 +10,12 @@ $(function () {
 });
 
 //-----ハンバーガー右に戻る---------
-$(function () {
-  $("#open-button.active").on("click", function () {
-    console.log("clickだよ");
-    $("#nav").addClass("SlideToRight");
-  });
-});
+// $(function () {
+//   $("#open-button.active").on("click", function () {
+//     console.log("clickだよ");
+//     $("#nav").addClass("SlideToRight");
+//   });
+// });
 
 //-----to top button---------
 $(function () {

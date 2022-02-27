@@ -74,6 +74,8 @@ EOM;
         header("Location: http://testapp.hippy.jp/contact/thanks.php");
         exit;
     }
+
+    // echo($email);
 ?>
 
 
@@ -293,7 +295,7 @@ EOM;
                         <p><?php echo nl2br($message); ?></p>
                     </div>
                 </div>
-                <input type="button" value="内容を修正する" onclick="history.back(-1)">
+                <input class="input-submit" type="button" value="内容を修正する" onclick="history.back(-1)">
                 <button type="submit" name="submit">送信する</button>
             </form>
           </div>
