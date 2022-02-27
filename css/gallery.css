@@ -424,7 +424,7 @@ header {
     object-fit: cover;
   }
   .gallery-area h3 {
-    margin-top: 0px;
+    margin: 0 0 10px 0;
   }
   .gallery-bg {
     display: inline-block;
