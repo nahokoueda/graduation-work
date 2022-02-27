@@ -78,9 +78,14 @@
   .contact-relative {
     height: 300px;
   }
+  .contact-bgArea {
+    width: 105vw;
+    height: 200px;
+  }
   .contact-bgArea h1 {
     font-size: 4rem;
-    padding-top: 30px;
+    line-height: 8rem;
+    /* padding-bottom: 0px; */
   }
   .header-container img {
     width: 28vw;
@@ -137,10 +142,13 @@
 }
 @media (max-width: 520px) {
   .attention-wrapper {
-    width: 60vw;
+    width: 85vw;
     /* height: 400px; */
     max-width: 440px;
     margin: 0 auto;
+  }
+  .attention-area {
+    margin-bottom: 60px;
   }
   .attention-text {
     padding: 20px;
@@ -207,7 +215,7 @@
   .checkArea {
     max-width: 370px;
     margin: 0 auto;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
   }
   .check-numberArea ul {
     width: 250px;

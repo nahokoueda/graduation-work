@@ -192,7 +192,7 @@ EOM;
                   </a>
                 </li>
                 <li>
-                  <a href="contact.html" target="”_blank”" rel="”noopener”">
+                  <a href="contact.html#contact" target="”_blank”" rel="”noopener”">
                     <div class="nav-containar__child border-underline">
                       <div class="nav-text">
                         <p>お問合せ</p>
