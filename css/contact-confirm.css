@@ -74,6 +74,29 @@
     font-size: 1.6rem;
   }
 }
+@media (max-width: 520px) {
+  .contact-relative {
+    height: 300px;
+  }
+  .contact-bgArea {
+    width: 105vw;
+    height: 200px;
+  }
+  .contact-bgArea h1 {
+    font-size: 4rem;
+    line-height: 8rem;
+    /* padding-bottom: 0px; */
+  }
+  .header-container img {
+    width: 28vw;
+    height: 14vw;
+    z-index: 10;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+  }
+}
 /*  check-number
 --------------------------------*/
 .checkArea {
@@ -106,14 +129,46 @@
   padding-bottom: 8px;
   margin-left: 20px;
 }
-.check-numberArea li:nth-of-type(1) {
+.check-numberArea li:nth-of-type(2) {
   border-bottom: solid 3px #a0a654;
 }
+@media (max-width: 960px) {
+  .checkArea {
+    max-width: 810px;
+    /* height: 43px; */
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+  .check-numberArea {
+    width: 300px;
+    margin-bottom: 75px;
+  }
+  .check-numberArea ul {
+    width: 300px;
+    margin: 0 auto;
+  }
+  .check-numberArea ul li {
+    margin: 0 10px;
+  }
+  .check-numberArea ul div {
+    display: none;
+  }
+}
 @media (max-width: 520px) {
+  .checkArea {
+    max-width: 370px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+  .check-numberArea ul {
+    width: 250px;
+    margin: 0 auto;
+  }
   .check-numberArea ul span {
     font-size: 1.6rem;
   }
 }
+
 /*  attention
   --------------------------------*/
 .attention-area {
@@ -131,25 +186,37 @@
   margin: 0 auto;
 }
 .attention-wrapper h3 {
-  padding-bottom: 20px;
+  padding: 20px 0;
   font-size: 3.2rem;
   font-weight: 500;
   letter-spacing: 0.4rem;
 }
+.confirm-check {
+  margin-top: 30px;
+}
+.confirm-check div {
+  margin-bottom: 20px;
+}
 
-form p {
-  /* margin-bottom: 30px; */
+.button-area {
+  padding-bottom: 30px;
 }
 .input-submit {
-  width: 200px;
-  height: 100px;
+  width: 120px;
+  height: 40px;
+  border-radius: 50px 50px;
+  background-color: #ffffff;
+}
+.input-button {
+  width: 120px;
+  height: 40px;
+  border-radius: 50px 50px;
   background-color: #f2db94;
 }
 
 @media (max-width: 960px) {
   .attention-wrapper {
     width: 60vw;
-    height: 300px;
     max-width: 810px;
     margin: 0 auto;
   }
@@ -161,9 +228,13 @@ form p {
   }
 }
 @media (max-width: 520px) {
+  .attention-area {
+    width: 360px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
   .attention-wrapper {
-    width: 60vw;
-    height: 400px;
+    width: 360px;
     max-width: 440px;
     margin: 0 auto;
   }

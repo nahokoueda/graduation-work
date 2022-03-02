@@ -15,7 +15,7 @@
     if (isset($_POST["submit"])) {
         // 送信ボタンが押された時に動作する処理をここに記述する
             
-        // 日本語をメールで送る場合のおまじない
+        // 日本語をメールで送る場合
             mb_language("ja");
         mb_internal_encoding("UTF-8");
         
@@ -71,7 +71,7 @@ EOM;
         mb_send_mail($email, $subject, $body, $header);
 
         // サンクスページに画面遷移させる
-        header("Location: http://testapp.hippy.jp/contact/thanks.php");
+        header("Location: /contact-thanks.php");
         exit;
     }
 
@@ -265,7 +265,7 @@ EOM;
                 <input type="hidden" name="emailCheck" value="<?php echo $emailCheck; ?>">
                 <input type="hidden" name="$message" value="<?php echo $$message; ?>">
                 <p>お問い合わせ内容はこちらで宜しいでしょうか？<br>よろしければ「送信する」ボタンを押して下さい。</p>
-                <div>
+                <div class="confirm-check">
                     <div>
                         <label>お問い合わせ項目</label>
                         <p><?php echo $radioChoice; ?></p>
@@ -295,8 +295,10 @@ EOM;
                         <p><?php echo nl2br($message); ?></p>
                     </div>
                 </div>
-                <input class="input-submit" type="button" value="内容を修正する" onclick="history.back(-1)">
-                <button type="submit" name="submit">送信する</button>
+                <div class="button-area">
+                  <input class="input-submit" type="button" value="内容を修正する" onclick="history.back(-1)">
+                  <button class="input-button" type="submit" name="submit">送信する</button>
+                </div>
             </form>
           </div>
         </div>
