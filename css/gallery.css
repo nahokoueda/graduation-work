@@ -6,7 +6,7 @@
 --------------------------------*/
 header {
   position: relative;
-  background: url(../img/2galleryTop.jpeg) no-repeat center center;
+  background: url(../img/2galleryTop.jpeg) no-repeat 0% 0%;
   background-attachment: fixed;
   background-size: cover;
   -webkit-background-size: cover;
