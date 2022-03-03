@@ -124,51 +124,11 @@ header nav.active {
   opacity: 1;
   pointer-events: auto;
   left: 0;
-}
-header nav.slideRight {
-  /* animation-name: slideright;
-  animation-duration: 1s;
-  animation-delay: 0;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;
-  animation-fill-mode: both; */
-  /* transition-property: all;
-  transition-duration: 1s;
-  transition-delay: 0;
-  transition-timing-function: ease-in-out;
-  left: 0%; */
-}
-@keyframes slideright {
-  0% {
-    left: 105%;
-  }
-  100% {
-    left: 0;
-  }
-}
-header nav.active {
   transition-property: all;
   transition-duration: 1s;
   transition-delay: 0s;
   transition-timing-function: ease-in-out;
 }
-
-/* header nav.active.SlideToRight {
-  animation-name: slidetoright;
-  animation-duration: 1s;
-  animation-delay: 0;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
-}
-@keyframes slidetoright {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: 1440px;
-  }
-} */
 
 .nav-wrapper {
   position: absolute;

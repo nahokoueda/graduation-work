@@ -14,6 +14,7 @@ header {
   height: 600px;
   margin-bottom: 140px;
 }
+/* スマホSafari用背景固定 */
 .header-wrap::before {
   display: block;
   position: fixed;
@@ -445,7 +446,7 @@ header {
     display: block;
     position: absolute;
     white-space: nowrap;
-    right: -170px;
+    right: -155px;
     font-size: 9rem;
   }
   .small-photo__area {
