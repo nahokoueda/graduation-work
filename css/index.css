@@ -473,7 +473,7 @@ video {
 .concept-area__intro h1,
 .stylist-area__intro h1 {
   position: relative;
-  width: 26vw;
+  width: 374px;
   height: auto;
   font-family: braisetto, script;
   font-weight: 400;
@@ -485,7 +485,7 @@ video {
 }
 .stylist-area__intro h1.wordFlow2 {
   position: relative;
-  width: 26vw;
+  width: 374px;
   height: auto;
   font-family: braisetto, script;
   font-weight: 400;
@@ -722,7 +722,7 @@ video {
   .concept-area__intro h1,
   .stylist-area__intro h1 {
     position: relative;
-    width: 26vw;
+    width: 28vw;
     height: auto;
     font-size: 10rem;
     margin-bottom: 72px;
@@ -1505,7 +1505,7 @@ a {
   margin: 0 auto;
   margin-bottom: 200px;
 }
-.reserve-wrapper.fadeUp {
+.reserve-area.fadeUp {
   animation-name: fade-up;
   animation-duration: 1s;
   animation-delay: 0s;

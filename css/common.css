@@ -100,7 +100,7 @@ a {
 }
 
 header nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 105%;
   bottom: 0;
